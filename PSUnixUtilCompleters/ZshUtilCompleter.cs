@@ -104,6 +104,7 @@ namespace PSUnixUtilCompleters
             }
 
             return new StringBuilder(s_completionScriptPath.Length + commandAst.Extent.Text.Length)
+                .Append("\"-l\" ")
                 .Append('"').Append(s_completionScriptPath).Append("\" ")
                 .Append('"').Append(completionText.Replace("\"", "\"\"\"")).Append("\"")
                 .ToString();
